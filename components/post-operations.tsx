@@ -28,7 +28,7 @@ import { useRouter } from "next/navigation";
 interface PostOperationsProps {
   post: Pick<Post, "id" | "title">;
 }
-
+// statfsSync
 async function deletePost(postId: string) {
   try {
     const response = await fetch(`/api/posts/${postId}`, { method: "DELETE" });
