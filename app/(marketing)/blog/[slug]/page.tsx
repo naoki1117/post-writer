@@ -14,7 +14,7 @@ async function getPostFromSlug(slug: string) {
   return post;
 }
 
-export async function generateMetaData({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };

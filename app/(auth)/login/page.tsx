@@ -1,4 +1,3 @@
-import Test from "@/components/test";
 import UserAuthForm from "@/components/user-auth-form";
 import Link from "next/link";
 

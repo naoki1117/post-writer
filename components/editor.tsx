@@ -6,12 +6,11 @@ import { buttonVariants } from "./ui/button";
 import TextareaAutosize from "react-textarea-autosize";
 import EditorJS from "@editorjs/editorjs";
 import { useCallback, useEffect, useRef, useState } from "react";
-import Header from "@editorjs/header";
 import LinkTool from "@editorjs/link";
 import List from "@editorjs/list";
 import CodeTool from "@editorjs/code";
 import { Post } from "@prisma/client";
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { postPatchSchema, postPatchSchemaType } from "@/lib/validations/post";
 import { toast } from "@/hooks/use-toast";
@@ -62,11 +61,7 @@ export default function Editor({ post }: EditorProps) {
     };
   }, [isMounted, initializeEditor]);
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<postPatchSchemaType>({
+  const { register, handleSubmit } = useForm<postPatchSchemaType>({
     resolver: zodResolver(postPatchSchema),
   });
 

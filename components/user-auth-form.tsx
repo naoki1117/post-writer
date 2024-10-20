@@ -42,7 +42,7 @@ export default function UserAuthForm() {
           }}
         >
           {isGitHubLoading ? (
-            <Icon.sppiner className="animate-spin" />
+            <Icon.spinner className="animate-spin" />
           ) : (
             <Icon.github />
           )}
@@ -56,7 +56,7 @@ export default function UserAuthForm() {
           }}
         >
           {isGoogleLoading ? (
-            <Icon.sppiner className="animate-spin" />
+            <Icon.spinner className="animate-spin" />
           ) : (
             <Icon.google />
           )}
